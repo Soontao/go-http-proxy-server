@@ -1,28 +1,24 @@
 package app
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
+
+	"github.com/elazarl/goproxy"
+)
 
 // CreateApp but not run
 func CreateApp(param *WebAppParam) *WebApplication {
-	engine := gin.Default()
 	app := &WebApplication{
-		param:  param,
-		engine: engine,
+		param: param,
 	}
-	app.mount()
 	return app
 }
 
 type WebApplication struct {
-	param  *WebAppParam
-	engine *gin.Engine
-}
-
-func (app *WebApplication) mount() {
-	app.engine.GET("/health", app.health)
-
+	param *WebAppParam
 }
 
 func (app *WebApplication) Run(addr string) error {
-	return app.engine.Run(addr)
+	proxy := goproxy.NewProxyHttpServer()
+	return http.ListenAndServe(":8080", proxy)
 }
