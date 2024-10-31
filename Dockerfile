@@ -1,6 +1,6 @@
 ARG VERSION=SNAPSHOT
-ARG APPNAME=go-project-template
-ARG APPDESCRIPTION=yet another go util tool
+ARG APPNAME=go-http-proxy-server
+ARG APPDESCRIPTION=simple http proxy server
 
 FROM golang:alpine AS build
 RUN apk add --no-cache --update git
