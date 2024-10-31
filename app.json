@@ -1,4 +1,4 @@
 {
-  "appName": "go-project-template",
-  "appDescription": "a go project template"
+  "appName": "go-http-proxy-server",
+  "appDescription": "simple http proxy server"
 }
