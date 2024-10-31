@@ -20,5 +20,6 @@ type WebApplication struct {
 
 func (app *WebApplication) Run(addr string) error {
 	proxy := goproxy.NewProxyHttpServer()
-	return http.ListenAndServe(":8080", proxy)
+	proxy.Verbose = true
+	return http.ListenAndServe(addr, proxy)
 }

@@ -1,11 +1,19 @@
 package main
 
 import (
+	"log"
+	"runtime"
+
 	"github.com/takama/daemon"
 	"github.com/urfave/cli"
 )
 
 func createDaemonCommands(name, description string) ([]cli.Command, error) {
+	if runtime.GOOS == "darwin" {
+		log.Println("darwin not support daemon")
+		return []cli.Command{}, nil
+	}
+
 	m, err := daemon.New(name, description, daemon.SystemDaemon)
 	if err != nil {
 		return nil, err
