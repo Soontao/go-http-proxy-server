@@ -21,4 +21,4 @@ EXPOSE 8080
 RUN apk --no-cache add ca-certificates tzdata
 COPY --from=build /go/src/app/main/app /usr/bin/app
 USER nobody
-CMD ["/usr/bin/app"]
+CMD ["/usr/bin/app", "entry"]
