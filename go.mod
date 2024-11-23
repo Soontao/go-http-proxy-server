@@ -7,7 +7,7 @@ toolchain go1.23.3
 require (
 	github.com/elazarl/goproxy v0.0.0-20240909085733-6741dbfc16a1
 	github.com/gin-gonic/gin v1.10.0
-	github.com/stretchr/testify v1.9.0
+	github.com/stretchr/testify v1.10.0
 	github.com/takama/daemon v1.0.0
 	github.com/urfave/cli v1.22.16
 )
