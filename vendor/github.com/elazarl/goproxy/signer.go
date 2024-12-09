@@ -3,12 +3,12 @@ package goproxy
 import (
 	"crypto"
 	"crypto/ecdsa"
+	"crypto/ed25519"
 	"crypto/elliptic"
 	"crypto/rsa"
 	"crypto/sha1"
 	"crypto/tls"
 	"crypto/x509"
-	"crypto/x509/pkix"
 	"fmt"
 	"math/big"
 	"math/rand"
@@ -53,11 +53,9 @@ func signHost(ca tls.Certificate, hosts []string) (cert *tls.Certificate, err er
 		// TODO(elazar): instead of this ugly hack, just encode the certificate and hash the binary form.
 		SerialNumber: serial,
 		Issuer:       x509ca.Subject,
-		Subject: pkix.Name{
-			Organization: []string{"GoProxy untrusted MITM proxy Inc"},
-		},
-		NotBefore: start,
-		NotAfter:  end,
+		Subject:      x509ca.Subject,
+		NotBefore:    start,
+		NotAfter:     end,
 
 		KeyUsage:              x509.KeyUsageKeyEncipherment | x509.KeyUsageDigitalSignature,
 		ExtKeyUsage:           []x509.ExtKeyUsage{x509.ExtKeyUsageServerAuth},
@@ -86,6 +84,10 @@ func signHost(ca tls.Certificate, hosts []string) (cert *tls.Certificate, err er
 		}
 	case *ecdsa.PrivateKey:
 		if certpriv, err = ecdsa.GenerateKey(elliptic.P256(), &csprng); err != nil {
+			return
+		}
+	case ed25519.PrivateKey:
+		if _, certpriv, err = ed25519.GenerateKey(&csprng); err != nil {
 			return
 		}
 	default:
