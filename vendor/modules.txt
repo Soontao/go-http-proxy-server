@@ -49,7 +49,7 @@ github.com/cpuguy83/go-md2man/v2/md2man
 # github.com/davecgh/go-spew v1.1.1
 ## explicit
 github.com/davecgh/go-spew/spew
-# github.com/elazarl/goproxy v0.0.0-20241209145312-60626aee8fb5
+# github.com/elazarl/goproxy v0.0.0-20241211082540-3df585cdee79
 ## explicit; go 1.18
 github.com/elazarl/goproxy
 # github.com/gabriel-vasile/mimetype v1.4.6
