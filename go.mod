@@ -5,7 +5,7 @@ go 1.21.0
 toolchain go1.23.4
 
 require (
-	github.com/elazarl/goproxy v0.0.0-20241220212429-b7394082e817
+	github.com/elazarl/goproxy v0.0.0-20241221164221-65f394be5e3c
 	github.com/gin-gonic/gin v1.10.0
 	github.com/stretchr/testify v1.10.0
 	github.com/takama/daemon v1.0.0
