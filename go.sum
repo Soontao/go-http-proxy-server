@@ -58,6 +58,8 @@ github.com/elazarl/goproxy v1.5.0 h1:YU2DM2E1piA2lvHx/Wv7AgxoE0MoYnPyKOnZhiNsopc
 github.com/elazarl/goproxy v1.5.0/go.mod h1:X/5W/t+gzDyLfHW4DrMdpjqYjpXsURlBt9lpBDxZZZQ=
 github.com/elazarl/goproxy v1.6.0 h1:KozdZ0HDR3tGqF5RBqwJToZMsImW9r0XnjkR+xOzQ1E=
 github.com/elazarl/goproxy v1.6.0/go.mod h1:X/5W/t+gzDyLfHW4DrMdpjqYjpXsURlBt9lpBDxZZZQ=
+github.com/elazarl/goproxy v1.6.1 h1:DsmEhraeCqxza89DlZtMLCwAV5doVPLgheg5OdP4i0M=
+github.com/elazarl/goproxy v1.6.1/go.mod h1:X/5W/t+gzDyLfHW4DrMdpjqYjpXsURlBt9lpBDxZZZQ=
 github.com/elazarl/goproxy/ext v0.0.0-20190711103511-473e67f1d7d2 h1:dWB6v3RcOy03t/bUadywsbyrQwCqZeNIEX6M1OtSZOM=
 github.com/elazarl/goproxy/ext v0.0.0-20190711103511-473e67f1d7d2/go.mod h1:gNh8nYJoAm43RfaxurUnxr+N1PwuFV3ZMl/efxlIlY8=
 github.com/gabriel-vasile/mimetype v1.4.6 h1:3+PzJTKLkvgjeTbts6msPJt4DixhT4YtFNf1gtGe3zc=
