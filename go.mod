@@ -2,7 +2,7 @@ module fornever.org
 
 go 1.22
 
-toolchain go1.24.2
+toolchain go1.24.3
 
 require (
 	github.com/elazarl/goproxy v1.7.2
